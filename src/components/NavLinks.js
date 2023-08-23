@@ -1,28 +1,41 @@
-import { Link, useLocation } from 'react-router-dom'
+import React from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 
-
-const NavLinks = ({categories}) => {
+const NavLinks = ({ categories }) => {
   const { pathname } = useLocation();
 
   return (
     <ul className='menu-lists'>
-      <label htmlFor="menu-btn" className='fa-solid fa-xmark' />
+      <label htmlFor='menu-btn' className='fa-solid fa-xmark' />
 
-      <Link to="/">
-        <li className={`${pathname === '/' ? 'active' : ''}`}>All Tourist Spots</li>
-      </Link>
+      <NavLink exact to='/' activeClassName='active'>
+        <li>Home</li>
+      </NavLink>
 
-      {
-        categories?.map(category => (
-          <Link key={category.slug} to={`/posts/${category.slug}`}>
-            <li className={ `/posts/${category.slug}` === pathname ? 'active' : '' }>
-              {category.name}
+      <NavLink to='/about' activeClassName='active'>
+        <li>About Us</li>
+      </NavLink>
+
+      {/* Dropdown submenu for "Tourist Spots" */}
+      <li>
+        <NavLink to='/' className={pathname === '/' ? 'active' : ''}>
+          Tourist Spots
+        </NavLink>
+        <ul className='submenu'>
+          {categories?.map(category => (
+            <li key={category.slug}>
+              <NavLink
+                to={`/posts/${category.slug}`}
+                activeClassName='active'
+              >
+                {category.name}
+              </NavLink>
             </li>
-          </Link>
-        ))
-      }
+          ))}
+        </ul>
+      </li>
     </ul>
-  )
-}
+  );
+};
 
-export default NavLinks
+export default NavLinks;
