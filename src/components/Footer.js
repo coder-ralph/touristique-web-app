@@ -7,12 +7,12 @@ const Footer = () => {
       <span className='copyright'>Copyright 2023 | Touristique</span>
       {/* Link your name to your GitHub profile */}
       <a
-        href='https://github.com/coder-ralph'
+        href='/'
         className='author'
         target='_blank'
         rel='noopener noreferrer'
       >
-        Made with ❤️ by Ralph Rosael
+        Made with ❤️ by Team Achievers 🚀
       </a>
 
       <div className='footer-social'>
