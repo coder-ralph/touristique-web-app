@@ -4,6 +4,8 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Search from './components/Search';
 import Loading from './components/Loading';
+import AboutUs from './components/AboutUs';
+
 
 import Article from './pages/Article';
 import Home from './pages/Home';
@@ -32,6 +34,7 @@ const App = () => {
           <Route path='/search/:slug' element={<SearchResult />} />
           <Route path='/article/:slug' element={<Article />} />
           <Route path='*' element={<NotFound />} />
+          <Route path='/about' element={<AboutUs />} />
         </Routes>
       </main>
       <Pagination totalPage={totalPage} />
