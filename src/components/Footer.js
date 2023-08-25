@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <footer>
-      <span className='copyright'>Copyright 2023 | Touristique</span>
+      <div className="footer-logo">
+        <span className='copyright'>Copyright 2023 |</span>
+        <img src="/logo.png" alt="Touristique Logo" />
+        <span>Touristique</span>
+      </div>
       {/* Link your name to your GitHub profile */}
       <a
         href='/'
