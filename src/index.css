@@ -449,7 +449,7 @@ nav :is(.fa-bars, .fa-xmark){
 }
 
 /* Footer */
-footer{
+footer {
   background: #fff;
   width: 100%;
   min-height: 70px;
@@ -461,7 +461,25 @@ footer{
   margin-top: 10px;
 }
 
-footer span{
+/* style of the footer logo image */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Add some spacing between the logo and other content */
+}
+
+.footer-logo img {
+  max-width: 20px; /* Adjust the size as needed */
+  height: auto;
+  margin-right: 1px; /* Add some spacing between the image and text */
+}
+
+.footer-logo .copyright {
+  font-size: 1rem; /* Adjust the font size as needed */
+  margin-right: 5px; /* Add some spacing between the image and text */
+}
+
+footer span {
   color: #131313;
   font-size: 1rem;
   letter-spacing: 1px;
@@ -469,11 +487,11 @@ footer span{
   margin: 10px;
 }
 
-footer .author{
+footer .author {
   color: #ff695e;
 }
 
-.footer-social{
+.footer-social {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -481,7 +499,7 @@ footer .author{
   margin: 10px;
 }
 
-.footer-social a{
+.footer-social a {
   width: 35px;
   height: 35px;
   color: #667498;
@@ -491,11 +509,12 @@ footer .author{
   align-items: center;
 }
 
-.footer-social a:hover{
+.footer-social a:hover {
   color: crimson;
   border-color: crimson;
   transition: all 0.3s ease;
 }
+
 
 /* Responsive */
 @media (max-width: 750px) {
