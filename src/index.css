@@ -58,6 +58,23 @@ nav .logo{
   text-transform: uppercase;
 }
 
+/* touristique logo */
+nav .logo {
+  display: flex;
+  align-items: center; /* Vertically align the logo and text */
+  color: rgb(158, 188, 255);
+  font-weight: 800;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+/* Add these lines for adjusting the logo image */
+nav .logo img {
+  max-width: 40px; /* Adjust the size as needed */
+  height: auto;
+  margin-right: 10px; /* Add some spacing between the image and text */
+}
+
 nav .menu-lists{
   display: flex;
   justify-content: center;
