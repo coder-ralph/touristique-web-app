@@ -17,7 +17,10 @@ const Header = () => {
     <header>
       <input type="checkbox" id='menu-btn' hidden />
       <nav>
-        <Link to="/" className="logo">Touristique</Link>
+        <Link to="/" className="logo">
+          <img src="/logo.png" alt="Touristique Logo" />
+          Touristique
+        </Link>
         <NavLinks categories={categories} />
 
         <label htmlFor="menu-btn" className='fa-solid fa-bars' />
