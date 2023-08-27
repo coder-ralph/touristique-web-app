@@ -10,7 +10,7 @@ const AboutUs = () => {
 
       {/* first image */}
       <div className="about-image">
-        <img src={antiqueImage} alt="Top Section" />
+        <img src={antiqueImage} alt="Top Section" title="Province of Antique: Where Mountains meet the Sea" /> {/* When a user hovers their cursor over the image, the title description will appear as a tooltip. */}
       </div>
 
       <p>
@@ -20,7 +20,7 @@ const AboutUs = () => {
 
       {/* second image */}
       <div className="about-image">
-        <img src={middleImage2} alt="Middle Section" />
+        <img src={middleImage2} alt="Middle Section" title="Antique Province Capitol" />
       </div>
 
       <p>
@@ -48,7 +48,7 @@ const AboutUs = () => {
       
       {/* third image */}
       <div className="about-image">
-        <img src={middleImage} alt="Middle Section" />
+        <img src={middleImage} alt="Middle Section" title="Mountain" />
       </div>
 
       <p>
