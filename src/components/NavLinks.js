@@ -19,10 +19,12 @@ const NavLinks = ({ categories }) => {
     <ul className='menu-lists'>
       <label htmlFor='menu-btn' className='fa-solid fa-xmark' />
 
+      {/* Home link */}
       <NavLink exact to='/' activeClassName='active'>
         <li>Home</li>
       </NavLink>
 
+      {/* About Us link */}
       <NavLink to='/about' activeClassName='active'>
         <li>About Us</li>
       </NavLink>
