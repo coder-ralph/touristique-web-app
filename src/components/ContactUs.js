@@ -47,7 +47,9 @@ const ContactUs = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
-          />
+            // Add the 'resize' property to prevent textarea resizing
+            style={{ resize: 'none' }}
+        />
         </div>
 
         {/* Submit button */}
