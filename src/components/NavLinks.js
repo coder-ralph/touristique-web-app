@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react'; // Import useEffect
 import { NavLink, useLocation } from 'react-router-dom';
+import '../index.css';
 
 const NavLinks = ({ categories }) => {
   const { pathname } = useLocation();
+
+  useEffect(() => {
+    if (pathname === '/' || pathname === '/about') {
+      const sectionId = pathname === '/' ? 'home' : 'about';
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [pathname]);
 
   return (
     <ul className='menu-lists'>
@@ -34,6 +45,16 @@ const NavLinks = ({ categories }) => {
           ))}
         </ul>
       </li>
+
+      {/* Add Products link */}
+      <NavLink to='/products' activeClassName='active'>
+        <li>Products</li>
+      </NavLink>
+      
+      {/* Add Contact link */}
+      <NavLink to='/contact' activeClassName='active'>
+        <li>Contact Us</li>
+      </NavLink>
     </ul>
   );
 };
