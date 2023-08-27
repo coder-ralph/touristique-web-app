@@ -48,12 +48,12 @@ const NavLinks = ({ categories }) => {
         </ul>
       </li>
 
-      Add Products link
+      {/* Products link */}
       <NavLink to='/products' activeClassName='active'>
         <li>Products</li>
       </NavLink>
       
-      {/* Add Contact link */}
+      {/* Contact link */}
       <NavLink to='/contact' activeClassName='active'>
         <li>Contact Us</li>
       </NavLink>
