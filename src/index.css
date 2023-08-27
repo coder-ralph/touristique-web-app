@@ -140,15 +140,35 @@ nav :is(.fa-bars, .fa-xmark){
   padding: 20px;
 }
 
-.about-us h2 {
+.about-title {
+  text-align: center;
+}
+
+.antique-title {
+  color: red;
+}
+
+/* .about-us h2 {
   text-align: center;
   margin-bottom: 20px;
-}
+} */
 
 .about-us p {
   text-align: justify;
   margin-bottom: 20px;
 }
+
+/* About Image */
+.about-image {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 /* Responsive Styles */
 @media (max-width: 600px) {
@@ -163,16 +183,7 @@ nav :is(.fa-bars, .fa-xmark){
   }
 }
 
-/* About Image */
-.about-image {
-  text-align: center;
-  margin: 20px 0;
-}
 
-.about-image img {
-  max-width: 100%;
-  height: auto;
-}
 
 /* Posts Components */
 .posts-container{
@@ -449,7 +460,7 @@ nav :is(.fa-bars, .fa-xmark){
 }
 
 /* Footer */
-footer {
+footer{
   background: #fff;
   width: 100%;
   min-height: 70px;
@@ -479,7 +490,7 @@ footer {
   margin-right: 5px; /* Add some spacing between the image and text */
 }
 
-footer span {
+footer span{
   color: #131313;
   font-size: 1rem;
   letter-spacing: 1px;
@@ -487,11 +498,11 @@ footer span {
   margin: 10px;
 }
 
-footer .author {
+footer .author{
   color: #ff695e;
 }
 
-.footer-social {
+.footer-social{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -499,7 +510,7 @@ footer .author {
   margin: 10px;
 }
 
-.footer-social a {
+.footer-social a{
   width: 35px;
   height: 35px;
   color: #667498;
@@ -509,12 +520,11 @@ footer .author {
   align-items: center;
 }
 
-.footer-social a:hover {
+.footer-social a:hover{
   color: crimson;
   border-color: crimson;
   transition: all 0.3s ease;
 }
-
 
 /* Responsive */
 @media (max-width: 750px) {

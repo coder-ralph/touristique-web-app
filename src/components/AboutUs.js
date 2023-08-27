@@ -6,7 +6,7 @@ import middleImage2 from '../images/capitol.jpg'; // path for the third image
 const AboutUs = () => {
   return (
     <div className="about-us">
-      <h2 style={{ textAlign: 'center' }}>About Us</h2>
+      <h2 className="about-title">About <span className="antique-title"> Antique</span></h2>
 
       {/* first image */}
       <div className="about-image">
