@@ -5,6 +5,8 @@ import Header from './components/Header';
 import Search from './components/Search';
 import Loading from './components/Loading';
 import AboutUs from './components/AboutUs';
+import Products from './components/Products'; // Import the Products component
+import ContactUs from './components/ContactUs'; // Import the Contact component
 
 
 import Article from './pages/Article';
@@ -35,6 +37,8 @@ const App = () => {
           <Route path='/article/:slug' element={<Article />} />
           <Route path='*' element={<NotFound />} />
           <Route path='/about' element={<AboutUs />} />
+          <Route path='/products' element={<Products />} /> {/* New route for Products */}
+          <Route path='/contact' element={<ContactUs />} /> 
         </Routes>
       </main>
       <Pagination totalPage={totalPage} />
