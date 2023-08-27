@@ -15,10 +15,9 @@ const Products = () => {
         Products of every<br />
         <span className="municipality">Municipality</span>
       </h2>
-
+      
       <p className="centered-justified-paragraph">
-        Antique, formally the Province of Antique, is a province in the Western Visayas area of the Philippines. San Jose de Buenavista, the largest town in Antique, serves as its capital.
-        The town of "Hamtic," which once served as the province's capital, gives Antique its name. The term "hamtic" describes the numerous, huge red ants that were present.
+        Explore and support us as we showcase the unique products of every municipality in the Province of Antique.
       </p>
 
       <div className="image-gallery">
@@ -60,7 +59,10 @@ const Products = () => {
           }
         }
 
-        .centered-justified-paragraph {
+          .centered-justified-paragraph {
+          text-align: left; /* Align the paragraph to the left */
+          font-size: 16px;
+          line-height: 1.5;
           max-width: 800px;
           margin: 20px auto; /* Adjust the margin-top value here */
           padding: 0 20px;
