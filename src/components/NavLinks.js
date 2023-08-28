@@ -20,6 +20,10 @@ const NavLinks = ({ categories }) => {
     setSubmenuOpen(!submenuOpen);
   };
 
+  const closeSubmenu = () => {
+    setSubmenuOpen(false);
+  };
+
   return (
     <ul className='menu-lists'>
       <label htmlFor='menu-btn' className='fa-solid fa-xmark' />
@@ -41,7 +45,7 @@ const NavLinks = ({ categories }) => {
         <ul className={`submenu ${submenuOpen ? 'open' : ''}`}>
           {categories?.map(category => (
             <li key={category.slug}>
-              <NavLink to={`/posts/${category.slug}`} activeClassName='active'>
+              <NavLink to={`/posts/${category.slug}`} activeClassName='active' onClick={closeSubmenu}>
                 {category.name}
               </NavLink>
             </li>
