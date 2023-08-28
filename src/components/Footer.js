@@ -25,13 +25,13 @@ const Footer = () => {
         <Link to='https://www.facebook.com/profile.php?id=100094889472093'>
           <i className='fab fa-facebook-f'></i>
         </Link>
-        <Link to='/'>
+        <Link to='/https://www.youtube.com/'>
           <i className='fab fa-youtube'></i>
         </Link>
-        <Link to='/'>
+        <Link to='/https://twitter.com/'>
           <i className='fab fa-twitter'></i>
         </Link>
-        <Link to='/'>
+        <Link to='/https://www.instagram.com/'>
           <i className='fab fa-instagram'></i>
         </Link>
       </div>
