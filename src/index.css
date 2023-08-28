@@ -74,14 +74,15 @@ nav .logo img {
   height: auto;
   margin-right: 10px; /* Add some spacing between the image and text */
 }
-
-nav .menu-lists{
+/* index.css */
+nav .menu-lists {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-nav .menu-lists li{
+nav .menu-lists li {
+  position: relative;
   padding: 5px 15px;
   color: #838eab;
   cursor: pointer;
@@ -90,48 +91,44 @@ nav .menu-lists li{
   letter-spacing: 0.5px;
 }
 
-nav .menu-lists li:is(:hover, .active){
+nav .menu-lists li:is(:hover, .active) {
   background: rgba(0, 0, 0, 0.05);
   color: #fff;
   transition: all ease 0.3s;
 }
 
-nav :is(.fa-bars, .fa-xmark){
+nav :is(.fa-bars, .fa-xmark) {
   color: #fff;
   display: none;
 }
 
-.menu-lists li:hover > ul {
-  display: block;
+.submenu-item .submenu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
-.menu-lists ul {
+.submenu-item .submenu-toggle i {
+  margin-left: 5px;
+}
+
+.submenu {
   display: none;
   position: absolute;
   background-color: white;
   border: 1px solid #ddd;
   z-index: 1000;
-  margin-top: 5px;
+  top: calc(100% + 5px);
+  left: 0;
+  min-width: 200px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.menu-lists ul li {
-  padding: 10px 15px;
-  color: #000;
-  font-weight: 400;
-}
-
-/* Sub menu */
-/* .submenu {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
-
-.menu-lists li:hover .submenu {
+.submenu.open {
   display: block;
-} */
+}
+
 
 /* About Us */
 .about-us {
