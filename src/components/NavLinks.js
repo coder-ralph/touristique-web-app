@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react'; // Import useEffect
+import React, { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import '../index.css';
 
 const NavLinks = ({ categories }) => {
   const { pathname } = useLocation();
+  const [submenuOpen, setSubmenuOpen] = useState(false);
 
   useEffect(() => {
     if (pathname === '/' || pathname === '/about') {
@@ -15,32 +16,32 @@ const NavLinks = ({ categories }) => {
     }
   }, [pathname]);
 
+  const toggleSubmenu = () => {
+    setSubmenuOpen(!submenuOpen);
+  };
+
   return (
     <ul className='menu-lists'>
       <label htmlFor='menu-btn' className='fa-solid fa-xmark' />
 
-      {/* Home link */}
       <NavLink exact to='/' activeClassName='active'>
         <li>Home</li>
       </NavLink>
 
-      {/* About Us link */}
       <NavLink to='/about' activeClassName='active'>
         <li>About Us</li>
       </NavLink>
 
       {/* Dropdown submenu for "Tourist Spots" */}
-      <li>
-        <NavLink to='/' className={pathname === '/' ? 'active' : ''}>
-          Tourist Spots
-        </NavLink>
-        <ul className='submenu'>
+      <li className={`submenu-item ${submenuOpen ? 'open' : ''}`}>
+        <div className='submenu-toggle' onClick={toggleSubmenu}>
+          <span>Tourist Spots</span>
+          <i className={`fa-solid fa-chevron-${submenuOpen ? 'up' : 'down'}`} />
+        </div>
+        <ul className={`submenu ${submenuOpen ? 'open' : ''}`}>
           {categories?.map(category => (
             <li key={category.slug}>
-              <NavLink
-                to={`/posts/${category.slug}`}
-                activeClassName='active'
-              >
+              <NavLink to={`/posts/${category.slug}`} activeClassName='active'>
                 {category.name}
               </NavLink>
             </li>
@@ -48,12 +49,10 @@ const NavLinks = ({ categories }) => {
         </ul>
       </li>
 
-      {/* Products link */}
       <NavLink to='/products' activeClassName='active'>
         <li>Products</li>
       </NavLink>
       
-      {/* Contact link */}
       <NavLink to='/contact' activeClassName='active'>
         <li>Contact Us</li>
       </NavLink>
