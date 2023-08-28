@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {} from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -22,18 +22,18 @@ const Footer = () => {
       <div className='footer-social'>
         {/* Replace "/" with the appropriate URLs for your social media profiles */}
         {/* Use the Link component for your social media links */}
-        <Link to='https://www.facebook.com/profile.php?id=100094889472093'>
+        <a href='https://www.facebook.com/profile.php?id=100094889472093' target='_blank' rel='noopener noreferrer'>
           <i className='fab fa-facebook-f'></i>
-        </Link>
-        <Link to='/https://www.youtube.com/'>
+        </a>
+        <a href='https://www.youtube.com/' target='_blank' rel='noopener noreferrer'>
           <i className='fab fa-youtube'></i>
-        </Link>
-        <Link to='/https://twitter.com/'>
+        </a>
+        <a href='https://twitter.com/' target='_blank' rel='noopener noreferrer'>
           <i className='fab fa-twitter'></i>
-        </Link>
-        <Link to='/https://www.instagram.com/'>
+        </a>
+        <a href='https://www.instagram.com/' target='_blank' rel='noopener noreferrer'>
           <i className='fab fa-instagram'></i>
-        </Link>
+        </a>
       </div>
     </footer>
   )
