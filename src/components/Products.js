@@ -29,10 +29,11 @@ const Products = () => {
       <style jsx>{`
         .product {
           text-align: center;
+          color: #4362AB;
         }
 
         .municipality {
-          color: red;
+          color: #FF0000;
         }
 
         .image-gallery {
