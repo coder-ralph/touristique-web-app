@@ -51,30 +51,28 @@ nav{
   user-select: none;
 }
 
-nav .logo{
-  color: rgb(158, 188, 255);
-  font-weight: 800;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-}
-
 /* touristique logo */
 nav .logo {
   display: flex;
-  align-items: center; /* Vertically align the logo and text */
+  align-items: center;
+  justify-content: flex-start; /* Align horizontally to the right */
+  margin-right: auto; /* Push other elements to the left */
+  padding: 10px 20px;
+  text-decoration: none;
   color: rgb(158, 188, 255);
-  font-weight: 800;
+  font-weight: bold;
   font-size: 1.8rem;
   text-transform: uppercase;
 }
 
-/* Add these lines for adjusting the logo image */
+/* Adjusting the logo image */
 nav .logo img {
   max-width: 40px; /* Adjust the size as needed */
   height: auto;
   margin-right: 10px; /* Add some spacing between the image and text */
 }
-/* index.css */
+
+/* Menu list */
 nav .menu-lists {
   display: flex;
   justify-content: center;
