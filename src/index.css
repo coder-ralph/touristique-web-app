@@ -557,6 +557,13 @@ footer span {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .privacy-policy-link {
+    flex-direction: column; /* Stack elements vertically on mobile */
+    text-align: center; /* Center the text content */
+  }
+}
+
 /* Responsive */
 @media (max-width: 750px) {
   nav .fa-bars{
