@@ -1,5 +1,5 @@
 import React from 'react'
-import {} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -35,6 +35,12 @@ const Footer = () => {
           <i className='fab fa-instagram'></i>
         </a>
       </div>
+
+      {/* Add the Privacy Policy link using the Link component */}
+      <Link to="/privacy-policy" className="privacy-policy-link">
+        Privacy Policy
+      </Link>
+      
     </footer>
   )
 }
