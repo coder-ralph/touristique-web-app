@@ -268,6 +268,7 @@ nav :is(.fa-bars, .fa-xmark) {
 .share-button {
   /* background-color: #f8f8f8; Light background color */
   margin-top: 10px; /* Add space at the top */
+  display: inline-block; /* Display buttons in a horizontal line */
 }
 
 .dark-bg {
