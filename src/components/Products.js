@@ -36,6 +36,10 @@ const Products = () => {
           color: #FF0000;
         }
 
+        .centered-justified-paragraph {
+          color: #333;
+        }
+
         .image-gallery {
           display: flex;
           justify-content: center;
