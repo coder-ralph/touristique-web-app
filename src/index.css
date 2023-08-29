@@ -98,6 +98,7 @@ nav .menu-lists li:is(:hover, .active) {
 nav :is(.fa-bars, .fa-xmark) {
   color: #fff;
   display: none;
+  font-size: 24px; /* Adjust the size for menu bar icon*/
 }
 
 .submenu-item .submenu-toggle {
