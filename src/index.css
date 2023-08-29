@@ -9,7 +9,8 @@
 
 body{
   width: 100%;
-  background: #f4f6f8;
+  /* background: #f4f6f8; */
+  background: #f4f6f8 url('images/bg/bg.jpg') center/cover no-repeat;
 }
 
 a{
@@ -179,8 +180,6 @@ nav :is(.fa-bars, .fa-xmark) {
   }
 }
 
-
-
 /* Posts Components */
 .posts-container{
   width: 95%;
@@ -267,7 +266,7 @@ nav :is(.fa-bars, .fa-xmark) {
 /* Share Media Button */
 
 .share-button {
-  background-color: #f8f8f8; /* Light background color */
+  /* background-color: #f8f8f8; Light background color */
   margin-top: 10px; /* Add space at the top */
 }
 
@@ -478,7 +477,7 @@ nav :is(.fa-bars, .fa-xmark) {
 }
 
 /* Footer */
-footer{
+footer {
   background: #fff;
   width: 100%;
   min-height: 70px;
@@ -488,27 +487,30 @@ footer{
   align-items: center;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   margin-top: 10px;
+  padding: 20px 0; /* Add padding for spacing */
+  position: relative; /* Add this to create a positioning context */
+  text-align: center; /* Center the content horizontally */
 }
 
 /* style of the footer logo image */
 .footer-logo {
   display: flex;
   align-items: center;
-  margin-bottom: 10px; /* Add some spacing between the logo and other content */
+  margin-bottom: 10px;
 }
 
 .footer-logo img {
-  max-width: 20px; /* Adjust the size as needed */
+  max-width: 20px;
   height: auto;
-  margin-right: 1px; /* Add some spacing between the image and text */
+  margin-right: 1px;
 }
 
 .footer-logo .copyright {
-  font-size: 1rem; /* Adjust the font size as needed */
-  margin-right: 5px; /* Add some spacing between the image and text */
+  font-size: 1rem;
+  margin-right: 5px;
 }
 
-footer span{
+footer span {
   color: #131313;
   font-size: 1rem;
   letter-spacing: 1px;
@@ -516,19 +518,23 @@ footer span{
   margin: 10px;
 }
 
-footer .author{
+.author {
   color: #ff695e;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-align: center; /* Center the text */
 }
 
-.footer-social{
+.footer-social {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 7px;
+  gap: 20px; /* Add space after social icons */
   margin: 10px;
+  flex-wrap: wrap; /* Allow social icons to wrap */
+  position: relative; /* Add this */
 }
 
-.footer-social a{
+.footer-social a {
   width: 35px;
   height: 35px;
   color: #667498;
@@ -536,12 +542,19 @@ footer .author{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px; /* Add spacing between social icons */
 }
 
-.footer-social a:hover{
+.footer-social a:hover {
   color: crimson;
   border-color: crimson;
   transition: all 0.3s ease;
+}
+
+.privacy-policy-link {
+  color: #4362AB;
+  align-items: center;
+  display: flex;
 }
 
 /* Responsive */
