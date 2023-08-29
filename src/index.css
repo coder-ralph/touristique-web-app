@@ -142,7 +142,11 @@ nav :is(.fa-bars, .fa-xmark) {
 }
 
 .antique-title {
-  color: red;
+  color: #FF0000;
+}
+
+.about-title {
+  color: #4362AB;
 }
 
 /* .about-us h2 {
