@@ -557,10 +557,16 @@ footer span {
   display: flex;
 }
 
+/* Privacy Policy Media Queries Responsive */
 @media (max-width: 768px) {
   .privacy-policy-link {
-    flex-direction: column; /* Stack elements vertically on mobile */
-    text-align: center; /* Center the text content */
+    flex-direction: column; /* Stack social icons vertically on mobile */
+    align-items: center; /* Center social icons horizontally */
+    position: absolute; /* Position the policy link */
+    bottom: 0; /* Place it at the bottom */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust to center it perfectly */
+    margin-top: 20px;
   }
 }
 
