@@ -62,7 +62,7 @@ const Posts = ({ posts }) => {
                 <button
                   className="dark-bg"
                   onClick={() => handleShareFacebook(
-                    `https://touristique-web-app.netlify.app/article/${post.slug}`,
+                    `https://touristique-web-app.vercel.app/article/${post.slug}`,
                     'Read this post.' // Short description for Facebook
                   )}
                 >
