@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom'
+
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Search from './components/Search';
@@ -7,7 +8,7 @@ import Loading from './components/Loading';
 import AboutUs from './components/AboutUs';
 import Products from './components/Products'; // Import the Products component
 import ContactUs from './components/ContactUs'; // Import the Contact component
-
+import PrivacyPolicy from './components/PrivacyPolicy'; // Import the PrivacyPolicy component
 
 import Article from './pages/Article';
 import Home from './pages/Home';
@@ -38,7 +39,8 @@ const App = () => {
           <Route path='*' element={<NotFound />} />
           <Route path='/about' element={<AboutUs />} />
           <Route path='/products' element={<Products />} /> {/* New route for Products */}
-          <Route path='/contact' element={<ContactUs />} /> 
+          <Route path='/contact' element={<ContactUs />} />
+          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         </Routes>
       </main>
       <Pagination totalPage={totalPage} />
