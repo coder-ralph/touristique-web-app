@@ -291,38 +291,45 @@ nav :is(.fa-bars, .fa-xmark) {
 
 
 /* Search Components */
-.search{
+.search {
   width: 95%;
   margin: 20px auto;
-  height: 50px;
+  height: 40px; /* Adjust the height to make it smaller */
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid #ccc; /* Add a border for visibility */
+  border-radius: 4px; /* Add border radius for rounded edges */
 }
 
 .search input {
-  width: 100%;
+  width: 80%; /* Adjust the width to make it smaller */
   height: 100%;
   border: none;
   outline: none;
   background: transparent;
-  padding: 0 20px;
-  font-size: 0.95rem;
+  padding: 0 10px; /* Adjust padding for a more compact look */
+  font-size: 0.85rem; /* Adjust font size for a smaller text */
 }
 
-.search button{
+.search button {
   border: none;
   outline: none;
   background: #182848;
-  width: 80px;
-  height: inherit;
+  width: 20%; /* Adjust the width to make it smaller */
+  height: 100%;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   user-select: none;
+  border-radius: 0 4px 4px 0; /* Add border radius for rounded edge on the button side */
+}
+
+&:hover {
+  background-color: transparent;
 }
 
 
