@@ -8,7 +8,7 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Generate the mailto link
-    const mailtoLink = `mailto:recipient@example.com?subject=Contact%20Us&body=Name:%20${encodeURIComponent(name)}%0D%0AEmail:%20${encodeURIComponent(email)}%0D%0AMessage:%20${encodeURIComponent(message)}`;
+    const mailtoLink = `mailto:touristique@example.com?subject=Contact%20Us&body=Name:%20${encodeURIComponent(name)}%0D%0AEmail:%20${encodeURIComponent(email)}%0D%0AMessage:%20${encodeURIComponent(message)}`;
     // Open the email client with the mailto link
     window.location.href = mailtoLink;
   };
