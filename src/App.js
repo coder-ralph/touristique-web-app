@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Search from './components/Search';
+// import Search from './components/Search';
 import Loading from './components/Loading';
 import AboutUs from './components/AboutUs';
 import Products from './components/Products'; // Import the Products component
@@ -28,7 +28,7 @@ const App = () => {
       { loading && <Loading /> }
 
       <Header />
-      <Search />
+      {/* <Search /> */}
 
       <main>
         <Routes>
