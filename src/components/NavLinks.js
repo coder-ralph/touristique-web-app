@@ -35,7 +35,8 @@ const NavLinks = ({ categories }) => {
 
   return (
     <ul className='menu-lists'>
-      <label htmlFor='menu-btn' className='fa-solid fa-xmark' />
+      <label htmlFor='menu-btn' className='#' />
+      {/* className='fa-solid fa-xmark */}
 
       <NavLink exact to='/' activeClassName='active' onClick={() => handleMenuItemClick('home')}>
         <li>Home</li>
