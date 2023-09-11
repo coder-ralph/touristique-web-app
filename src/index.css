@@ -514,7 +514,7 @@ nav :is(.fa-bars) {
 /* Post Box */
 .post-box {
   background-color: #fff;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   border-radius: 5px;
   margin-bottom: 20px;
   padding: 20px;
@@ -562,17 +562,19 @@ nav :is(.fa-bars) {
 .comment-form-container {
   width: 100%; /* Adjust the width as needed */
   padding: 20px;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   border-radius: 5px;
   margin-right: 2%;  /* Adjust the spacing between the comment form and published comments */
+  background-color: #fff;
 }
 
 /* Published Comments Container */
 .published-comments-container {
   width: 100%; /* Adjust the width as needed */
   padding: 20px;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   border-radius: 5px;
+  background-color: #fff;
 }
 
 /* Comments Title */
@@ -588,7 +590,7 @@ nav :is(.fa-bars) {
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
-  background-color: #f8f8f8;
+  background-color: #fff;
   resize: vertical; /* Allow vertical resizing */
   max-height: 200px; /* Set a maximum height */
 }
