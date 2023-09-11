@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import '../index.css';
+
+import contactUsImage from '../images/contactus.png'; // Adjust the path as needed
 
 const ContactUs = () => {
   const [name, setName] = useState('');
@@ -14,55 +17,77 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="contact-form">
-      <h2>Contact Us</h2>
-      <form onSubmit={handleSubmit}>
-        {/* Form fields */}
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-            placeholder="John Doe"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            placeholder="johndoe@example.com"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-            // Add the 'resize' property to prevent textarea resizing
-            style={{ resize: 'none' }}
+    <div className="contact-container">
+      <div className="contact-illustration">
+        {/* Add your illustrator image here */}
+        <img
+          src={contactUsImage}
+          alt="ContactUs"
+          style={{ maxWidth: '100%', height: 'auto' }}
         />
-        </div>
+      </div>
+      <div className="contact-form">
+        <h2>Contact Us</h2>
+        <form onSubmit={handleSubmit}>
+          {/* Form fields */}
+          <div className="form-group">
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              placeholder="Jamie Larson"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              placeholder="jamie@example.com"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Message:</label>
+            <textarea
+              id="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
+              // Add the 'resize' property to prevent textarea resizing
+              style={{ resize: 'none' }}
+            />
+          </div>
 
-        {/* Submit button */}
-        <button type="submit">Send</button>
-      </form>
+          {/* Submit button */}
+          <button type="submit">Send</button>
+        </form>
+      </div>
 
       <style jsx>{`
-        .contact-form {
-          max-width: 400px;
+        .contact-container {
+          display: flex;
+          justify-content: space-between;
+          max-width: 900px; /* Adjust the container width as needed */
           margin: 0 auto;
           padding: 20px;
           border: 1px solid #ccc;
           border-radius: 5px;
+        }
+
+        .contact-illustration {
+          flex: 1; /* Take up 50% of the container's width */
+          padding: 10px; /* Add padding for spacing */
+        }
+
+        .contact-form {
+          flex: 1; /* Take up 50% of the container's width */
+          padding: 10px; /* Add padding for spacing */
         }
 
         .contact-form h2 {
