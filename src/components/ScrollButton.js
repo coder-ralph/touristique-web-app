@@ -29,7 +29,7 @@ const ScrollButton = () => {
     fontSize: '2.5rem',
     zIndex: 99,
     cursor: 'pointer',
-    color: 'cornflowerblue',
+    color: '#7f71ff',
     display: visible ? 'inline' : 'none'
   }
 
