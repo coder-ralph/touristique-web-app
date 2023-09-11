@@ -1,50 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+/* Importing Google Fonts and global styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
-*{
+/* Resetting default styles */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
-body{
+/* Global styles for the body */
+body {
   width: 100%;
-  /* background: #f4f6f8; */
-  background: #f4f6f8 url('images/bg/bg.jpg') center/cover no-repeat;
+  /* background: #f4f6f8 url('images/bg/bg.jpg') center/cover no-repeat; */
+  background: #f4f6f8;
 }
 
-a{
+/* Global styles for links */
+a {
   text-decoration: none;
 }
 
-ul{
+/* Resetting default list styles */
+ul {
   list-style: none;
 }
 
-::selection{
+/* Text selection style */
+::selection {
   background: #7f71ff;
   color: #fff;
 }
 
-::-webkit-scrollbar{
+/* Hide scrollbar */
+::-webkit-scrollbar {
   display: none;
 }
 
-main{
+/* Main container */
+main {
   width: 100%;
   min-height: calc(100vh - 250px);
 }
 
-/* Header */
-header{
+/* Header styles */
+header {
   width: 100%;
-  background: linear-gradient(15deg, #4b6cb7, #182848 80%);
+  /* background: linear-gradient(15deg, #4b6cb7, #182848 80%); */
+  background: #ffffff;
 }
 
-nav{
-  width: 95%;
-  height: 80px;
-  margin: 0 auto;
+/* Navigation styles */
+nav {
+  width: 100%;
+  height: 120px;
+  margin: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -52,12 +62,12 @@ nav{
   user-select: none;
 }
 
-/* touristique logo */
+/* Logo styles */
 nav .logo {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Align horizontally to the right */
-  margin-right: auto; /* Push other elements to the left */
+  justify-content: flex-start;
+  margin-right: auto;
   padding: 10px 20px;
   text-decoration: none;
   color: rgb(158, 188, 255);
@@ -66,14 +76,14 @@ nav .logo {
   text-transform: uppercase;
 }
 
-/* Adjusting the logo image */
+/* Logo image styles */
 nav .logo img {
-  max-width: 40px; /* Adjust the size as needed */
+  max-width: 40px;
   height: auto;
-  margin-right: 10px; /* Add some spacing between the image and text */
+  margin-right: 10px;
 }
 
-/* Menu list */
+/* Menu list styles */
 nav .menu-lists {
   display: flex;
   justify-content: center;
@@ -83,25 +93,27 @@ nav .menu-lists {
 nav .menu-lists li {
   position: relative;
   padding: 5px 15px;
-  color: #838eab;
+  color: #333;
   cursor: pointer;
   margin: 3px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.5px;
 }
 
 nav .menu-lists li:is(:hover, .active) {
-  background: rgba(0, 0, 0, 0.05);
-  color: #fff;
+  /* background: rgba(0, 0, 0, 0.05); */
+  color: #7f71ff;
   transition: all ease 0.3s;
 }
 
-nav :is(.fa-bars, .fa-xmark) {
-  color: #fff;
+/* Menu icon styles */
+nav :is(.fa-bars) {
+  color: #0B2446;
+  font-size: 24px;
   display: none;
-  font-size: 24px; /* Adjust the size for menu bar icon*/
 }
 
+/* Submenu item styles */
 .submenu-item .submenu-toggle {
   display: flex;
   align-items: center;
@@ -113,6 +125,7 @@ nav :is(.fa-bars, .fa-xmark) {
   margin-left: 5px;
 }
 
+/* Submenu styles */
 .submenu {
   display: none;
   position: absolute;
@@ -129,37 +142,31 @@ nav :is(.fa-bars, .fa-xmark) {
   display: block;
 }
 
-
-/* About Us */
+/* About Us styles */
 .about-us {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
+/* Title styles */
 .about-title {
   text-align: center;
+  color: #4362AB;
 }
 
+/* Antique title styles */
 .antique-title {
   color: #FF0000;
 }
 
-.about-title {
-  color: #4362AB;
-}
-
-/* .about-us h2 {
-  text-align: center;
-  margin-bottom: 20px;
-} */
-
+/* Paragraph styles */
 .about-us p {
   text-align: justify;
   margin-bottom: 20px;
 }
 
-/* About Image */
+/* About Image styles */
 .about-image {
   text-align: center;
   margin: 20px 0;
@@ -170,8 +177,7 @@ nav :is(.fa-bars, .fa-xmark) {
   height: auto;
 }
 
-
-/* Responsive Styles */
+/* Responsive styles for About Us */
 @media (max-width: 600px) {
   .about-us {
     padding: 10px;
@@ -184,100 +190,271 @@ nav :is(.fa-bars, .fa-xmark) {
   }
 }
 
-/* Posts Components */
-.posts-container{
+/* Posts Container styles */
+.posts-container {
   width: 95%;
-  margin: 20px auto;
+  margin: 30px auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 10px;
+  grid-gap: 20px;
 }
 
-.posts-box{
-  width: 100%;
-  padding: 10px 0;
+/* Post Box styles */
+.posts-box {
+  width: 160%;
+  margin: 0 auto; /* Center the posts horizontally */
+  padding: 15px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.posts-img{
+/* Responsive styles for Posts Container on Tablet */
+@media (max-width: 767px) {
+  .posts-box {
+    width: 90%;
+    margin: 0 auto; /* Center the posts on smaller screens */
+    margin-bottom: 20px; /* Keep the same margin for smaller screens */
+  }
+}
+
+/* Post Image styles */
+.posts-img {
   width: 100%;
-  height: 185px;
+  height: 220px;
   overflow: hidden;
   position: relative;
 }
 
-.posts-img img{
+/* Post Image inner image styles */
+.posts-img img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: filter 0.3s ease;
 }
 
-.posts-img:hover img{
-  transition: all 1s linear;
-  filter: invert(1);
+/* Hover effect for Post Image */
+.posts-img:hover img {
+  filter: brightness(0.8);
 }
 
-.posts-img .categories{
+/* Categories styles */
+.posts-img .categories {
   position: absolute;
-  left: 0;
+  left: 10px;
   top: 10px;
   display: flex;
   gap: 5px;
 }
 
-.posts-img .categories .category{
-  padding: 2px 10px;
-  font-size: 0.9rem;
+.posts-img .categories .category {
+  padding: 5px 10px;
+  font-size: 0.8rem;
   color: #fff;
+  background-color: #4362AB;
+  border-radius: 10px;
 }
 
-.posts-text h3{
-  font-size: 1.1rem;
+/* Post Text styles */
+.posts-text h3 {
+  font-size: 1.2rem;
   text-transform: capitalize;
-  color: #000;
-  font-weight: 500;
-  margin: 5px 0;
-  line-height: 25px;
-  transition: all 0.3s linear;
+  color: #333;
+  font-weight: 600;
+  margin: 10px 0;
+  line-height: 1.3;
+  transition: color 0.3s ease;
 }
 
-.posts-text h3:hover{
-  color: #0101b7;
+/* Hover effect for Post Text */
+.posts-text h3:hover {
+  color: #7f71ff;
 }
 
-.posts-text .category-time{
+.posts-text {
+  text-align: center;
+}
+
+.posts-text .category-time {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 0.9rem;
-  margin-top: 5px;
+  margin-top: 10px;
   font-weight: 500;
 }
 
-.posts-text .category-time .published-time{
+.posts-text .category-time .published-time {
   color: #888;
 }
 
-.posts-text .excerpt{
-  font-size: 0.9rem;
-  color: #888;
+.posts-text .excerpt {
+  font-size: 1rem;
+  color: #666;
 }
 
-/* Share Media Button */
+/* Blue icon styles */
+.blue-icon {
+  color: #7f71ff;
+}
 
+/* Two-column layout styles */
+.two-column-layout {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Left column styles */
+.left-column {
+  flex: 2;
+  max-width: 70%;
+  padding-right: 250px;
+  margin-left: 40px;
+  position: relative;
+}
+
+/* Right column styles */
+.right-column {
+  flex: 1;
+  max-width: 30%;
+  padding-left: 75px;
+  margin-right: 40px;
+  position: sticky;
+  top: 0;
+}
+
+/* Responsive styles for Two-column layout */
+
+@media (max-width: 1024px) {
+  .two-column-layout {
+    flex-direction: column;
+  }
+
+  .left-column, .right-column {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+/* Continue Reading button styles */
+.continue-reading {
+  text-align: center;
+  margin-top: 10px;
+  border: 2px solid #7f71ff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #7f71ff;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  max-width: 170px;
+  margin: 20px auto;
+}
+
+.continue-reading:hover {
+  background-color: #7f71ff;
+  color: #fff;
+}
+
+/* Responsive styles for Posts Container on Tablet */
+
+@media (max-width: 767px) {
+  .posts-box {
+    width: 90%;
+    margin: 0 auto; /* Center the posts on smaller screens */
+    margin-bottom: 20px; /* Reduce the margin for smaller screens */
+  }
+}
+
+@media (max-width: 767px) {
+  .posts-container {
+    grid-gap: 10px; /* Adjust the grid gap for mobile devices */
+  }
+}
+
+/* Responsive styles for Two-column layout */
+@media (max-width: 1024px) {
+  .two-column-layout {
+    flex-direction: column;
+  }
+
+  .left-column, .right-column {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+
+/* Weather Forecast styles for laptops and larger screens */
+.weather-forecast {
+  display: none; /* Hide by default on all screens */
+  width: 100%;
+  background-color: #7f71ff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-top: 440px;
+}
+
+.weather-forecast h2 {
+  font-size: 1.5rem;
+  color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.weather-forecast h2 img {
+  max-width: 40px;
+  margin-right: 10px;
+}
+
+.weather-forecast p {
+  font-size: 1.1rem;
+  color: #f7f7f7;
+  margin-bottom: 12px;
+}
+
+.weather-forecast img {
+  max-width: 80px;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Media Query for laptops and larger screens */
+@media (min-width: 1024px) {
+  .weather-forecast {
+    display: block; /* Display on laptops and larger screens */
+  }
+}
+
+/* Share Media Button styles */
 .share-button {
-  /* background-color: #f8f8f8; Light background color */
-  margin-top: 10px; /* Add space at the top */
-  display: inline-block; /* Display buttons in a horizontal line */
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .dark-bg {
-  background-color: #4362AB; /* Dark background color for buttons */
-  color: #fff; /* White text color */
+  background-color: #7f71ff;
+  color: #fff;
   padding: 5px 10px;
   border: none;
   border-radius: 5px;
@@ -286,38 +463,37 @@ nav :is(.fa-bars, .fa-xmark) {
 }
 
 .dark-bg:hover {
-  background-color: #9EBCFF; /* Darker color on hover */
+  background-color: #ff695e;
 }
 
-
-/* Search Components */
+/* Search styles */
 .search {
   width: 95%;
   margin: 20px auto;
-  height: 40px; /* Adjust the height to make it smaller */
+  height: 40px;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #ccc; /* Add a border for visibility */
-  border-radius: 4px; /* Add border radius for rounded edges */
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .search input {
-  width: 80%; /* Adjust the width to make it smaller */
+  width: 80%;
   height: 100%;
   border: none;
   outline: none;
   background: transparent;
-  padding: 0 10px; /* Adjust padding for a more compact look */
-  font-size: 0.85rem; /* Adjust font size for a smaller text */
+  padding: 0 10px;
+  font-size: 0.85rem;
 }
 
 .search button {
   border: none;
   outline: none;
-  background: #182848;
-  width: 20%; /* Adjust the width to make it smaller */
+  background: #7f71ff;
+  width: 20%;
   height: 100%;
   color: #fff;
   display: flex;
@@ -325,126 +501,172 @@ nav :is(.fa-bars, .fa-xmark) {
   justify-content: center;
   cursor: pointer;
   user-select: none;
-  border-radius: 0 4px 4px 0; /* Add border radius for rounded edge on the button side */
+  border-radius: 0 4px 4px 0;
 }
 
-&:hover {
-  background-color: transparent;
-}
-
-
-/* Article */
-.post-container{
-  width: 95%;
+/* Article Container */
+.article-container {
+  width: 75%;
   margin: 0 auto;
 }
 
-.post-container article .title{
+/* Post Box */
+.post-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
+  margin-top: 30px; 
+}
+
+.post-box .title {
   text-align: center;
   font-size: 2rem;
   text-transform: capitalize;
   color: #182848;
 }
 
-.post-container article .published-time{
+.post-box .published-time {
   text-align: center;
   margin-bottom: 20px;
   font-size: 1.2rem;
   color: #838eab;
 }
 
-.post-container article .published-time i{
+.post-box .published-time i {
   margin-right: 7px;
 }
 
-.post-container article .content{
-  margin-bottom: 20px;
-}
-
-.post-container article .content :is(img, video){
+.post-box .content :is(img, video) {
   width: 100%;
   height: 100%;
   object-fit: cover;
   margin: 10px 0;
 }
 
-.post-container article .content :is(h1, h2, h3, h4, h5, h6, p){
+.post-box .content :is(h1, h2, h3, h4, h5, h6, p) {
   margin: 10px 0;
   line-height: 1.8rem;
 }
 
-
-/* Comments */
-.comments{
-  margin-top: 50px;
-  margin-bottom: 10px;
-  width: 100%;
+/* Comments Container */
+.comments {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.comments h2{
-  color: #4b6cb7;
+/* Comment Form Container */
+.comment-form-container {
+  width: 100%; /* Adjust the width as needed */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 2%;  /* Adjust the spacing between the comment form and published comments */
+}
+
+/* Published Comments Container */
+.published-comments-container {
+  width: 100%; /* Adjust the width as needed */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Comments Title */
+.comments h2 {
+  color: #333;
   padding: 5px 0;
 }
 
-.comments form :is(input, textarea){
+/* Comments Form Input/Textarea Styles (No changes here) */
+.comments form :is(input, textarea) {
   width: 100%;
-  border: none;
-  outline: none;
-  background: #fff;
-  padding: 10px 20px;
-  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
   margin: 10px 0;
-  resize: none;
+  background-color: #f8f8f8;
+  resize: vertical; /* Allow vertical resizing */
+  max-height: 200px; /* Set a maximum height */
 }
 
-.comments form input{
+.comments form input {
   height: 50px;
 }
 
-.comments form .check{
+.comments form .check {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
 }
 
-.comments form .check input[type="checkbox"]{
-  width: 25px;
-  height: 25px;
+.comments form .check input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
 }
 
-.comments form button{
+.comments form button {
   display: block;
   border: none;
   outline: none;
-  background: #4b6cb7;
+  background: #7f71ff;
   padding: 10px 30px;
   color: #fff;
   font-weight: 600;
   letter-spacing: 1px;
   cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Add a smooth transition */
 }
 
-.comments .content{
+.comments form button:hover {
+  background: #ff695e; /* Change the background color to pink on hover */
+}
+
+/* Comments Content Styles */
+.comments .content {
   margin-top: 20px;
-  background: #4b6cb7;
+  background: #7f71ff;
   color: #fff;
   border-radius: 5px;
   padding: 10px 20px;
 }
 
-.comments .content i{
-  margin-right: 5px;
+.comments .content strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
 }
 
-.comments .content p{
-  color: #ddd;
-  font-size: 0.9rem;
+.comments .content p {
+  font-size: 1rem;
   margin-top: 3px;
 }
 
-/* Pagination */
-.pagination{
+.comments .content i {
+  margin-right: 5px;
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 767px) {
+  /* Allow items to wrap to the next row on smaller screens */
+  .comments {
+    flex-wrap: wrap;
+  }
+  
+  /* Adjust the width and spacing for comment form and published comments */
+  .comment-form-container,
+  .published-comments-container {
+    width: 100%; /* Use full width on small screens */
+    margin-bottom: 20px; /* Add spacing between comment form and published comments */
+  }
+}
+
+/* Pagination styles */
+.pagination {
   width: 95%;
   margin: 25px auto;
   display: flex;
@@ -453,7 +675,7 @@ nav :is(.fa-bars, .fa-xmark) {
   user-select: none;
 }
 
-.pagination .prev-next{
+.pagination .prev-next {
   text-transform: capitalize;
   cursor: pointer;
   color: #182848;
@@ -461,11 +683,11 @@ nav :is(.fa-bars, .fa-xmark) {
   transition: all 0.3s linear;
 }
 
-.pagination .prev-next i{
+.pagination .prev-next i {
   font-size: 0.85rem;
 }
 
-.pagination .numbers{
+.pagination .numbers {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -473,7 +695,7 @@ nav :is(.fa-bars, .fa-xmark) {
   cursor: pointer;
 }
 
-.pagination .numbers li{
+.pagination .numbers li {
   color: #182848;
   width: 25px;
   height: 25px;
@@ -483,12 +705,12 @@ nav :is(.fa-bars, .fa-xmark) {
   transition: all 0.2s linear;
 }
 
-.pagination .numbers li:is(:hover, .active){
+.pagination .numbers li:is(:hover, .active) {
   background: #182848;
   color: #fff;
 }
 
-/* Footer */
+/* Footer styles */
 footer {
   background: #fff;
   width: 100%;
@@ -499,12 +721,12 @@ footer {
   align-items: center;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   margin-top: 10px;
-  padding: 20px 0; /* Add padding for spacing */
-  position: relative; /* Add this to create a positioning context */
-  text-align: center; /* Center the content horizontally */
+  padding: 20px 0;
+  position: relative;
+  text-align: center;
 }
 
-/* style of the footer logo image */
+/* Footer logo styles */
 .footer-logo {
   display: flex;
   align-items: center;
@@ -522,6 +744,7 @@ footer {
   margin-right: 5px;
 }
 
+/* Footer text styles */
 footer span {
   color: #4362AB;
   font-size: 1rem;
@@ -530,20 +753,22 @@ footer span {
   margin: 10px;
 }
 
+/* Author styles */
 .author {
   color: #ff695e;
   margin-bottom: 10px;
   cursor: pointer;
-  text-align: center; /* Center the text */
+  text-align: center;
 }
 
+/* Footer social media icon styles */
 .footer-social {
   display: flex;
   align-items: center;
-  gap: 20px; /* Add space after social icons */
+  gap: 20px;
   margin: 10px;
-  flex-wrap: wrap; /* Allow social icons to wrap */
-  position: relative; /* Add this */
+  flex-wrap: wrap;
+  position: relative;
 }
 
 .footer-social a {
@@ -554,7 +779,7 @@ footer span {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px; /* Add spacing between social icons */
+  margin-bottom: 10px;
 }
 
 .footer-social a:hover {
@@ -563,59 +788,84 @@ footer span {
   transition: all 0.3s ease;
 }
 
+/* Privacy Policy link styles */
 .privacy-policy-link {
   color: #4362AB;
   align-items: center;
   display: flex;
 }
 
-/* Privacy Policy Media Queries Responsive */
+/* Media Query for Privacy Policy link on mobile screens */
+
 @media (max-width: 768px) {
   .privacy-policy-link {
-    flex-direction: column; /* Stack social icons vertically on mobile */
-    align-items: center; /* Center social icons horizontally */
-    position: absolute; /* Position the policy link */
-    bottom: 0; /* Place it at the bottom */
-    left: 50%; /* Center it horizontally */
-    transform: translateX(-50%); /* Adjust to center it perfectly */
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     margin-top: 20px;
   }
 }
 
-/* Responsive */
+/* Menu Bar Media Query for mobile screens */
+
 @media (max-width: 750px) {
-  nav .fa-bars{
+  nav .fa-bars {
     display: block;
   }
 
-  nav .menu-lists{
+  nav .menu-lists {
     position: fixed;
     top: 0px;
     left: 0;
-    width: 100%;
+    /* right: -50%; Initially off-screen to the right */
+    width: 70%;
     height: 100vh;
     z-index: 100;
-    background: linear-gradient(15deg, #4b6cb7, #182848 80%);
+    /* background: linear-gradient(15deg, #4b6cb7, #182848 80%); */
+    background: #7f71ff;
     display: none;
     flex-direction: column;
     justify-content: space-around;
     font-size: 1.2rem;
     overflow-y: scroll;
+    transition: right 0.3s ease-in-out; /* Added transition for smooth animation */
   }
 
-  nav .fa-xmark{
+  /* nav .fa-xmark {
     display: block;
     font-size: 1.5rem;
     cursor: pointer;
-  }
+  } */
 
-  header #menu-btn:checked ~ nav .menu-lists{
+  header #menu-btn:checked ~ nav .menu-lists {
     display: flex;
   }
-}
 
-@media (max-width: 330px) {
-  .posts-container{
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  nav .menu-lists ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding for ul */
+  }
+
+  nav .menu-lists li {
+    margin: 5px 0; /* Reduced the margin to make spacing smaller */
+    padding: 0; /* Remove padding for li */
+  }
+
+  .submenu-item .submenu-toggle i {
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+  }
+
+  .submenu.open .submenu-toggle i {
+    transform: rotate(180deg);
+  }
+
+  .submenu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
