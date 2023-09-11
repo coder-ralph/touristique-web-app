@@ -19,8 +19,10 @@ const Header = () => {
       <nav>
         <Link to="/" className="logo">
           <img src="/logo.png" alt="Touristique Logo" />
-          Touristique
+          <span style={{ color: '#0B2446' }}>Tourist</span>
+          <span style={{ color: '#FF0000' }}>ique</span>
         </Link>
+        {/* <img src="/text-logo.png" alt="Touristique Text" class="touristique-logo" /> */}
         <NavLinks categories={categories} />
 
         <label htmlFor="menu-btn" className='fa-solid fa-bars' />
