@@ -66,9 +66,9 @@ const NavLinks = ({ categories }) => {
         </ul>
       </li>
 
-      <NavLink to='/products' activeClassName='active' onClick={() => handleMenuItemClick('products')}>
+      {/* <NavLink to='/products' activeClassName='active' onClick={() => handleMenuItemClick('products')}>
         <li>Products</li>
-      </NavLink>
+      </NavLink> */}
       
       <NavLink to='/contact' activeClassName='active' onClick={() => handleMenuItemClick('contact')}>
         <li>Contact Us</li>
