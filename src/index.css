@@ -47,7 +47,8 @@ main {
 header {
   width: 100%;
   /* background: linear-gradient(15deg, #4b6cb7, #182848 80%); */
-  background: #ffffff;
+  background: #fff;
+  margin-bottom: 50px;
 }
 
 /* Navigation styles */
@@ -710,6 +711,40 @@ nav :is(.fa-bars) {
   color: #fff;
 }
 
+/* Add these media queries to your 'index.css' file */
+
+/* Mobile devices (portrait and landscape) */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-illustration {
+    order: 2; /* Move illustration below the form */
+    text-align: center; /* Center the image */
+    margin-bottom: 20px; /* Add some spacing between the form and the image */
+  }
+
+  .contact-form {
+    order: 1; /* Move the form above the illustration */
+  }
+
+  /* Adjust the form group margins and input/textarea sizes for mobile */
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  input,
+  textarea {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 8px 15px;
+  }
+}
+
 /* Footer styles */
 footer {
   background: #fff;
@@ -724,51 +759,23 @@ footer {
   padding: 20px 0;
   position: relative;
   text-align: center;
+  margin-top: 50px;
 }
 
-/* Footer logo styles */
-.footer-logo {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.footer-logo img {
-  max-width: 20px;
-  height: auto;
-  margin-right: 1px;
-}
-
-.footer-logo .copyright {
-  font-size: 1rem;
-  margin-right: 5px;
-}
-
-/* Footer text styles */
-footer span {
-  color: #4362AB;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  font-weight: 500;
-  margin: 10px;
-}
-
-/* Author styles */
-.author {
-  color: #ff695e;
-  margin-bottom: 10px;
-  cursor: pointer;
+/* Updated CSS for the footer */
+.footer-container {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
   text-align: center;
 }
 
-/* Footer social media icon styles */
 .footer-social {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 20px;
-  margin: 10px;
-  flex-wrap: wrap;
-  position: relative;
+  margin: 10px 0;
 }
 
 .footer-social a {
@@ -779,18 +786,31 @@ footer span {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
 }
 
 .footer-social a:hover {
-  color: crimson;
-  border-color: crimson;
+  color: #7f71ff;
+  border-color: #7f71ff;
   transition: all 0.3s ease;
 }
 
-/* Privacy Policy link styles */
-.privacy-policy-link {
-  color: #4362AB;
+.footer-text {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin: 10px;
+}
+
+.author {
+  color: #fff;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.the-team-link {
+  color: #7f71ff;
   align-items: center;
   display: flex;
 }
@@ -798,7 +818,7 @@ footer span {
 /* Media Query for Privacy Policy link on mobile screens */
 
 @media (max-width: 768px) {
-  .privacy-policy-link {
+  .the-team-link {
     flex-direction: column;
     align-items: center;
     position: absolute;
@@ -869,3 +889,4 @@ footer span {
     justify-content: space-between;
   }
 }
+
