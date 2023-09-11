@@ -27,7 +27,7 @@ const ContactUs = () => {
         />
       </div>
       <div className="contact-form">
-        <h2>Contact Us</h2>
+        <h2 style={{ marginBottom: '50px' }}>Contact Us</h2>
         <form onSubmit={handleSubmit}>
           {/* Form fields */}
           <div className="form-group">
@@ -76,8 +76,8 @@ const ContactUs = () => {
           max-width: 900px; /* Adjust the container width as needed */
           margin: 0 auto;
           padding: 20px;
-          border: 1px solid #ccc;
-          border-radius: 5px;
+          /* border: 1px solid #ccc;
+          border-radius: 5px; */
         }
 
         .contact-illustration {
