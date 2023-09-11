@@ -1,26 +1,27 @@
-import React from 'react'
+import React from 'react';
 import { QUERY_ONE_POST } from '../Graphql/Queries';
 import Post from '../components/Post';
 import Comments from '../components/Comments';
-import useQueryPosts from '../hooks/useQueryPosts'
+import useQueryPosts from '../hooks/useQueryPosts';
 
 const Article = () => {
-  const { posts, error } = useQueryPosts({query: QUERY_ONE_POST, limit: 5});
-  
+  const { posts, error } = useQueryPosts({ query: QUERY_ONE_POST, limit: 5 });
 
-  if(error) return <h2 style={{textAlign: 'center'}}>{error}</h2>;
+  if (error) return <h2 style={{ textAlign: 'center' }}>{error}</h2>;
   return (
-    <div className='post-container'>
-      {
-        posts?.map(post => (
-          <React.Fragment key={post.id}>
+    <div className='article-container'>
+      {posts?.map(post => (
+        <div key={post.id} className='post-container'>
+          <div className='post-box'>
             <Post post={post} />
+          </div>
+          <div className='comments-box'>
             <Comments comments={post?.comments} />
-          </React.Fragment>
-        ))
-      }
+          </div>
+        </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Article
+export default Article;
