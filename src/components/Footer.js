@@ -1,27 +1,10 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="footer-logo">
-        <span className='copyright'>Copyright 2023 |</span>
-        <img src="/logo.png" alt="Touristique Logo" />
-        <span>Touristique</span>
-      </div>
-      {/* Link your name to your GitHub profile */}
-      <a
-        href='/'
-        className='author'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        Made with ❤️ by Team Achievers 🚀
-      </a>
-
+    <footer className="footer-container">
       <div className='footer-social'>
-        {/* Replace "/" with the appropriate URLs for your social media profiles */}
-        {/* Use the Link component for your social media links */}
         <a href='https://www.facebook.com/profile.php?id=100094889472093' target='_blank' rel='noopener noreferrer'>
           <i className='fab fa-facebook-f'></i>
         </a>
@@ -36,13 +19,26 @@ const Footer = () => {
         </a>
       </div>
 
-      {/* Add the Privacy Policy link using the Link component */}
-      <Link to="/privacy-policy" className="privacy-policy-link">
-        Privacy Policy
-      </Link>
-      
-    </footer>
-  )
-}
+      <div className="footer-text">
+        <span className='copyright'>Copyright © 2023</span>
+        <span> | </span>
+        <span>Touristique. All Rights Reserved.</span>
+        <br />
+        <a
+          href='/'
+          className='author'
+          // target='_blank'
+          // rel='noopener noreferrer'
+        >
+          Made with ❤️ by Team Achievers
+        </a>
+      </div>
 
-export default Footer
+      <Link to="/the-team" className="the-team-link">
+        The Team
+      </Link>
+    </footer>
+  );
+};
+
+export default Footer;
