@@ -526,6 +526,7 @@ nav :is(.fa-bars) {
   font-size: 2rem;
   text-transform: capitalize;
   color: #182848;
+  margin-top: 20px;
 }
 
 .post-box .published-time {
