@@ -554,7 +554,7 @@ nav :is(.fa-bars) {
 .pagination .prev-next {
   text-transform: capitalize;
   cursor: pointer;
-  color: #182848;
+  color: #7f71ff;
   font-weight: 500;
   transition: all 0.3s linear;
 }
@@ -572,7 +572,7 @@ nav :is(.fa-bars) {
 }
 
 .pagination .numbers li {
-  color: #182848;
+  color: #7f71ff;
   width: 25px;
   height: 25px;
   display: flex;
@@ -582,7 +582,7 @@ nav :is(.fa-bars) {
 }
 
 .pagination .numbers li:is(:hover, .active) {
-  background: #182848;
+  background: #7f71ff;
   color: #fff;
 }
 
