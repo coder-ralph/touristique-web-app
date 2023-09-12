@@ -209,7 +209,7 @@ nav :is(.fa-bars) {
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-bottom: 20px;
   margin-left: 10px;
   margin-right: 10px;
@@ -240,6 +240,7 @@ nav :is(.fa-bars) {
   object-fit: cover;
   object-position: center;
   transition: filter 0.3s ease;
+  border-radius: 5px;
 }
 
 /* Hover effect for Post Image */
