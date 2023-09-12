@@ -191,255 +191,90 @@ nav :is(.fa-bars) {
   }
 }
 
-/* Posts Container styles */
-.posts-container {
+/* Posts Components */
+.posts-container{
   width: 95%;
-  margin: 30px auto;
+  margin: 20px auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(calc(33.33% - 10px), 1fr));
+  grid-gap: 10px;
 }
 
-/* Post Box styles */
-.posts-box {
-  width: 160%;
-  margin: 0 auto; /* Center the posts horizontally */
+.posts-box{
+  width: 100%;
   padding: 15px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05);
 }
 
-/* Responsive styles for Posts Container on Tablet */
-@media (max-width: 767px) {
-  .posts-box {
-    width: 90%;
-    margin: 0 auto; /* Center the posts on smaller screens */
-    margin-bottom: 20px; /* Keep the same margin for smaller screens */
-  }
-}
-
-/* Post Image styles */
-.posts-img {
+.posts-img{
   width: 100%;
-  height: 220px;
+  height: 250px;
   overflow: hidden;
   position: relative;
 }
 
-/* Post Image inner image styles */
-.posts-img img {
+.posts-img img{
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: filter 0.3s ease;
-  border-radius: 5px;
 }
 
-/* Hover effect for Post Image */
-.posts-img:hover img {
-  filter: brightness(0.8);
+.posts-img:hover img{
+  transition: all 1s linear;
+  filter: invert(1);
 }
 
-/* Categories styles */
-.posts-img .categories {
+.posts-img .categories{
   position: absolute;
-  left: 10px;
+  left: 0;
   top: 10px;
   display: flex;
   gap: 5px;
 }
 
-.posts-img .categories .category {
-  padding: 5px 10px;
-  font-size: 0.8rem;
+.posts-img .categories .category{
+  padding: 2px 10px;
+  font-size: 0.9rem;
   color: #fff;
-  background-color: #4362AB;
-  border-radius: 10px;
 }
 
-/* Post Text styles */
-.posts-text h3 {
-  font-size: 1.2rem;
+.posts-text h3{
+  font-size: 1.1rem;
   text-transform: capitalize;
-  color: #333;
-  font-weight: 600;
-  margin: 10px 0;
-  line-height: 1.3;
-  transition: color 0.3s ease;
-}
-
-/* Hover effect for Post Text */
-.posts-text h3:hover {
-  color: #7f71ff;
-}
-
-.posts-text {
+  color: #000;
+  font-weight: 500;
+  margin: 5px 0;
+  line-height: 25px;
+  transition: all 0.3s linear;
   text-align: center;
 }
 
-.posts-text .category-time {
+.posts-text h3:hover{
+  color: #0101b7;
+}
+
+.posts-text .category-time{
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 0.9rem;
-  margin-top: 10px;
+  margin-top: 5px;
   font-weight: 500;
 }
 
-.posts-text .category-time .published-time {
+.posts-text .category-time .published-time{
   color: #888;
 }
 
-.posts-text .excerpt {
-  font-size: 1rem;
-  color: #666;
-}
-
-/* Blue icon styles */
-.blue-icon {
-  color: #7f71ff;
-}
-
-/* Two-column layout styles */
-.two-column-layout {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-/* Left column styles */
-.left-column {
-  flex: 2;
-  max-width: 70%;
-  padding-right: 250px;
-  margin-left: 40px;
-  position: relative;
-}
-
-/* Right column styles */
-.right-column {
-  flex: 1;
-  max-width: 30%;
-  padding-left: 75px;
-  margin-right: 40px;
-  position: sticky;
-  top: 0;
-}
-
-/* Responsive styles for Two-column layout */
-
-@media (max-width: 1024px) {
-  .two-column-layout {
-    flex-direction: column;
-  }
-
-  .left-column, .right-column {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-/* Continue Reading button styles */
-.continue-reading {
+.posts-text .excerpt{
+  font-size: 0.9rem;
+  color: #333;
+  justify-content: center;
   text-align: center;
-  margin-top: 10px;
-  border: 2px solid #7f71ff;
-  border-radius: 5px;
-  padding: 5px 10px;
-  color: #fff;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  max-width: 170px;
-  margin: 20px auto;
-}
-
-.continue-reading:hover {
-  background-color: #fff;
-  color: #fff;
-}
-
-/* Responsive styles for Posts Container on Tablet */
-
-@media (max-width: 767px) {
-  .posts-box {
-    width: 90%;
-    margin: 0 auto; /* Center the posts on smaller screens */
-    margin-bottom: 20px; /* Reduce the margin for smaller screens */
-  }
-}
-
-@media (max-width: 767px) {
-  .posts-container {
-    grid-gap: 10px; /* Adjust the grid gap for mobile devices */
-  }
-}
-
-/* Responsive styles for Two-column layout */
-@media (max-width: 1024px) {
-  .two-column-layout {
-    flex-direction: column;
-  }
-
-  .left-column, .right-column {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-
-/* Weather Forecast styles for laptops and larger screens */
-.weather-forecast {
-  display: none; /* Hide by default on all screens */
-  width: 100%;
-  background-color: #7f71ff;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: relative;
-  margin-top: 440px;
-}
-
-.weather-forecast h2 {
-  font-size: 1.5rem;
-  color: #f7f7f7;
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.weather-forecast h2 img {
-  max-width: 40px;
-  margin-right: 10px;
-}
-
-.weather-forecast p {
-  font-size: 1.1rem;
-  color: #f7f7f7;
-  margin-bottom: 12px;
-}
-
-.weather-forecast img {
-  max-width: 80px;
-  height: auto;
-  display: block;
-  margin-top: 10px;
-}
-
-/* Media Query for laptops and larger screens */
-@media (min-width: 1024px) {
-  .weather-forecast {
-    display: block; /* Display on laptops and larger screens */
-  }
 }
 
 /* Share Media Button styles */
@@ -466,6 +301,26 @@ nav :is(.fa-bars) {
 
 .dark-bg:hover {
   background-color: #ff695e;
+}
+
+/* FaCalendar Icon */
+.purple-icon {
+  color: #7f71ff;
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  .posts-container {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+
+  .posts-box {
+    padding: 10px;
+  }
+
+  .posts-img {
+    height: auto;
+  }
 }
 
 /* Search styles */
