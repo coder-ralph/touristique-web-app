@@ -3,9 +3,9 @@ import TopBarProgress from 'react-topbar-progress-indicator'
 
 TopBarProgress.config({
   barColors: {
-    "0": "tomato",
-    "0.5": "tomato",
-    "1.0": "tomato",
+    "0": "#7f71ff", // Periwinkle
+    "0.5": "#7f71ff",
+    "1.0": "#7f71ff",
   },
   shadowBlur: 10
 })
