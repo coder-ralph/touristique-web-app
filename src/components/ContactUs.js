@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../index.css';
 
 import contactUsImage from '../images/contactus.png'; // Adjust the path as needed
@@ -7,17 +7,31 @@ const ContactUs = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [isFormVisible, setIsFormVisible] = useState(false);
+
+  useEffect(() => {
+    // Add a delay to trigger the fade-in animation
+    const delay = setTimeout(() => {
+      setIsFormVisible(true);
+    }, 100);
+
+    return () => clearTimeout(delay);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Generate the mailto link
-    const mailtoLink = `mailto:touristique@example.com?subject=Contact%20Us&body=Name:%20${encodeURIComponent(name)}%0D%0AEmail:%20${encodeURIComponent(email)}%0D%0AMessage:%20${encodeURIComponent(message)}`;
+    const mailtoLink = `mailto:touristique@example.com?subject=Contact%20Us&body=Name:%20${encodeURIComponent(
+      name
+    )}%0D%0AEmail:%20${encodeURIComponent(email)}%0D%0AMessage:%20${encodeURIComponent(
+      message
+    )}`;
     // Open the email client with the mailto link
     window.location.href = mailtoLink;
   };
 
   return (
-    <div className="contact-container">
+    <div className={`contact-container ${isFormVisible ? 'fade-in' : ''}`}>
       <div className="contact-illustration">
         {/* Add your illustrator image here */}
         <img
@@ -27,7 +41,7 @@ const ContactUs = () => {
         />
       </div>
       <div className="contact-form">
-        <h2 style={{ marginBottom: '50px' }}>Contact Us</h2>
+        <h2>Contact Us</h2>
         <form onSubmit={handleSubmit}>
           {/* Form fields */}
           <div className="form-group">
@@ -76,8 +90,14 @@ const ContactUs = () => {
           max-width: 900px; /* Adjust the container width as needed */
           margin: 0 auto;
           padding: 20px;
-          /* border: 1px solid #ccc;
-          border-radius: 5px; */
+          opacity: 0;
+          transform: translateY(-20px);
+          transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .fade-in {
+          opacity: 1;
+          transform: translateY(0);
         }
 
         .contact-illustration {
@@ -150,6 +170,6 @@ const ContactUs = () => {
       `}</style>
     </div>
   );
-}
+};
 
 export default ContactUs;
