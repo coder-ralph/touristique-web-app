@@ -14,7 +14,7 @@ const Search = () => {
 
   return (
     <form className='search' onSubmit={handleSearch}>
-      <input type="search" placeholder='Search...' required
+      <input type="search" placeholder='Search tourist sposts' required
       value={search} onChange={e => setSearch(e.target.value)} />
 
       <button type='submit'>
