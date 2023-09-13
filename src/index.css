@@ -108,7 +108,7 @@ nav .menu-lists li:is(:hover, .active) {
 }
 
 /* Menu icon styles */
-nav :is(.fa-bars) {
+nav :is(.fa-bars, .fa-xmark) {
   color: #0B2446;
   font-size: 24px;
   display: none;
@@ -690,7 +690,7 @@ footer {
   display: flex;
 }
 
-/* Media Query for Privacy Policy link on mobile screens */
+/* Media Query for The Team link on mobile screens */
 
 @media (max-width: 768px) {
   .the-team-link {
