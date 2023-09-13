@@ -112,6 +112,7 @@ const ContactUs = () => {
 
         .contact-form h2 {
           text-align: center;
+          margin-bottom: 40px;
         }
 
         .form-group {
