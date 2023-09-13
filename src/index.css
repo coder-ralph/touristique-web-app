@@ -145,7 +145,7 @@ nav :is(.fa-bars, .fa-xmark) {
 
 /* About Us styles */
 .about-us {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -154,6 +154,7 @@ nav :is(.fa-bars, .fa-xmark) {
 .about-title {
   text-align: center;
   color: #333;
+  margin-top: 20px;
 }
 
 /* Antique title styles */
@@ -167,16 +168,59 @@ nav :is(.fa-bars, .fa-xmark) {
   margin-bottom: 20px;
 }
 
-/* About Image styles */
-.about-image {
-  text-align: center;
-  margin: 20px 0;
+/* Scroll-triggered animation */
+.about-us {
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-us.scrolling {
+  transform: translateY(-30px);
 }
 
 .about-image img {
   max-width: 100%;
   height: auto;
+  margin-top: 20px;
 }
+
+/* About Image styles */
+.about-image {
+  text-align: center;
+  margin: 20px 0;
+  opacity: 0; 
+  transform: translateX(-20px);
+  animation: fadeInLeft 2s ease-in-out forwards; /* Apply the animation */
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Title and Paragraph styles */
+.about-title,
+.about-us p {
+  opacity: 0;
+  animation: fadeInRight 2s ease-in-out forwards; /* Apply the animation */
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 /* Responsive styles for About Us */
 @media (max-width: 600px) {
