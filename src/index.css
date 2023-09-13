@@ -727,7 +727,6 @@ footer {
     font-size: 1.2rem;
     overflow-y: scroll;
     transition: right 0.3s ease-in-out; /* Added transition for smooth animation */
-    margin-top: 10px;
   }
 
   nav .fa-xmark {
