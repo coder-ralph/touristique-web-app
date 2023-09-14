@@ -8,7 +8,7 @@ import Loading from './components/Loading';
 import AboutUs from './components/AboutUs';
 // import Products from './components/Products'; // Import the Products component
 import ContactUs from './components/ContactUs'; // Import the Contact component
-import PrivacyPolicy from './components/PrivacyPolicy'; // Import the PrivacyPolicy component
+import TheTeam from './components/TheTeam'; // Import the TheTeam component
 
 import Article from './pages/Article';
 import Home from './pages/Home';
@@ -40,7 +40,7 @@ const App = () => {
           <Route path='/about' element={<AboutUs />} />
           {/* <Route path='/products' element={<Products />} /> New route for Products */}
           <Route path='/contact' element={<ContactUs />} />
-          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+          <Route path='/the-team' element={<TheTeam />} />
         </Routes>
       </main>
       <Pagination totalPage={totalPage} />
