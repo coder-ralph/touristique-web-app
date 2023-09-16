@@ -764,7 +764,6 @@ footer {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    padding: 5px; /* for spacing */
   }
 
   /* Adjust the menu lists for mobile */
