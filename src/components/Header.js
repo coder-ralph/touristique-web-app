@@ -19,8 +19,9 @@ const Header = () => {
       <nav>
         <Link to="/" className="logo">
           <img src="/logo.png" alt="Touristique Logo" />
-          <span style={{ color: '#0B2446' }}>Tourist</span>
-          <span style={{ color: '#FF0000' }}>ique</span>
+          <span style={{ background: 'linear-gradient(to right, #7f71ff, #2b7ddf)', WebkitBackgroundClip: 'text', color: 'transparent' }}>Touristique</span>
+          {/* <span style={{ color: '#7f71ff' }}>Tourist</span>
+          <span style={{ color: '#2b7ddf' }}>ique</span> */}
         </Link>
         {/* <img src="/text-logo.png" alt="Touristique Text" class="touristique-logo" /> */}
         <NavLinks categories={categories} />
