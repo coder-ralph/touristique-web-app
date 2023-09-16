@@ -768,7 +768,7 @@ footer {
     width: 70%;
     height: 100vh;
     z-index: 100;
-    background: #7f71ff;
+    background: linear-gradient(to right, #7f71ff, #2b7ddf);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
