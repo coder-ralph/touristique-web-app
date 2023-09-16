@@ -758,6 +758,13 @@ footer {
 @media (max-width: 750px) {
   nav .fa-bars {
     display: block;
+    margin-right: 20px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #7f71ff, #2b7ddf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding: 5px; /* for spacing */
   }
 
   /* Adjust the menu lists for mobile */
@@ -777,9 +784,6 @@ footer {
     transition: left 0.3s ease-in-out; /* Slide in from the left */
   }
 
-  nav .fa-bars {
-    margin-right: 20px;
-  }
   /* Show the close (X) icon */
   nav .fa-xmark {
     display: block;
