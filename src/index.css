@@ -62,6 +62,7 @@ nav {
   align-items: center;
   flex-wrap: wrap;
   user-select: none;
+  background-color: #00c2cb;
 }
 
 /* Logo styles */
@@ -98,7 +99,8 @@ nav .menu-lists li {
   color: #333;
   cursor: pointer;
   margin: 3px;
-  font-weight: 500;
+  /* font-weight: 500; */
+  font-size: 20px;
   letter-spacing: 0.5px;
 }
 
@@ -396,7 +398,7 @@ nav :is(.fa-bars, .fa-xmark) {
 .search button {
   border: none;
   outline: none;
-  background: #7f71ff;
+  background: linear-gradient(to right, #7f71ff, #2b7ddf);
   width: 20%;
   height: 100%;
   color: #fff;
