@@ -51,10 +51,11 @@ header {
   margin-bottom: 50px;
 }
 
+
 /* Navigation styles */
 nav {
   width: 100%;
-  height: 120px;
+  height: 150px;
   margin: 0;
   display: flex;
   justify-content: space-around;
@@ -79,7 +80,7 @@ nav .logo {
 
 /* Logo image styles */
 nav .logo img {
-  max-width: 40px;
+  max-width: 70px;
   height: auto;
   margin-right: 10px;
 }
@@ -105,6 +106,8 @@ nav .menu-lists li:is(:hover, .active) {
   /* background: rgba(0, 0, 0, 0.05); */
   color: #7f71ff;
   transition: all ease 0.3s;
+  border-radius: 5px;
+  border: 1px dashed #7f71ff;
 }
 
 /* Menu icon styles */
@@ -748,51 +751,57 @@ footer {
   }
 }
 
-/* Menu Bar Media Query for mobile screens */
+/* Media Query for mobile screens */
 
 @media (max-width: 750px) {
   nav .fa-bars {
     display: block;
   }
 
+  /* Adjust the menu lists for mobile */
   nav .menu-lists {
     position: fixed;
-    top: 0px;
-    left: 0;
-    /* right: -50%; Initially off-screen to the right */
+    top: 0;
+    left: -100%; /* Initially off-screen to the left */
     width: 70%;
     height: 100vh;
     z-index: 100;
-    /* background: linear-gradient(15deg, #4b6cb7, #182848 80%); */
     background: #7f71ff;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     font-size: 1.2rem;
     overflow-y: scroll;
-    transition: right 0.3s ease-in-out; /* Added transition for smooth animation */
+    transition: left 0.3s ease-in-out; /* Slide in from the left */
   }
 
+  nav .fa-bars {
+    margin-right: 20px;
+  }
+  /* Show the close (X) icon */
   nav .fa-xmark {
     display: block;
     font-size: 1.5rem;
     cursor: pointer;
   }
 
+  /* When the menu button is checked, display the menu */
   header #menu-btn:checked ~ nav .menu-lists {
-    display: flex;
+    left: 0; /* Slide the menu in from the left */
   }
 
+  /* Style adjustments for menu items */
   nav .menu-lists ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove padding for ul */
+    list-style-type: none;
+    padding: 0;
   }
 
   nav .menu-lists li {
-    margin: 5px 0; /* Reduced the margin to make spacing smaller */
-    padding: 0; /* Remove padding for li */
+    margin: 5px 0;
+    padding: 0;
   }
 
+  /* Adjust submenu item styles if needed */
   .submenu-item .submenu-toggle i {
     transform: rotate(0deg);
     transition: all 0.3s ease;
@@ -807,5 +816,17 @@ footer {
     align-items: center;
     justify-content: space-between;
   }
+
+  /* Adjust the logo styles for mobile */
+  nav .logo {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav .logo img {
+    margin-right: 0;
+    margin-bottom: 10px; /* Add margin below the logo */
+  }
 }
+
 
