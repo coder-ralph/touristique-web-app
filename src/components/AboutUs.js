@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import antiqueImage from '../images/antique.jpg';
+import antiqueImage from '../images/province-of-antique.jpg';
 import middleImage from '../images/antique-mountain.jpg';
 import middleImage2 from '../images/antique-capitol.jpg';
 
