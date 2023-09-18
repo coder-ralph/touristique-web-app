@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import antiqueImage from '../images/antique-arch.jpg';
+import antiqueImage from '../images/antique.jpg';
 import middleImage from '../images/antique-mountain.jpg';
 import middleImage2 from '../images/antique-capitol.jpg';
 
@@ -25,10 +25,11 @@ const AboutUs = () => {
   return (
     <div className={`about-us ${scrolling ? 'scrolling' : ''}`}>
       <h2 className="about-title">Welcome to the <span className="antique-title"> Province of Antique</span></h2>
+      <p style={{ textAlign: 'center', justifyContent: 'center', display: 'flex', color: '#7f71ff' }}>“Where Mountains Meet the Sea”</p>
 
       {/* first image */}
       <div className="about-image">
-        <img src={antiqueImage} alt="Top Section" title="Province of Antique: Where Mountains meet the Sea" />
+        <img src={antiqueImage} alt="Top Section" title="Welcome to Antique Province: “Where Mountains Meet the Sea”." />
       </div>
 
       <p>
