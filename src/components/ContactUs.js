@@ -35,12 +35,8 @@ const ContactUs = () => {
       return;
     }
 
-    // Generate the mailto link
-    const mailtoLink = `mailto:touristique@example.com?subject=Contact%20Us&body=Name:%20${encodeURIComponent(
-      name
-    )}%0D%0AEmail:%20${encodeURIComponent(email)}%0D%0AMessage:%20${encodeURIComponent(
-      message
-    )}`;
+    // Generate the mailto link with subject and body
+    const mailtoLink = `mailto:touristique2023@gmail.com?subject=Tourist%20Questions%20or%20Inquiries 💬&body=${encodeURIComponent(message)}`;
 
     // Try to open the email client
     const isOpened = window.open(mailtoLink, '_self');
@@ -125,7 +121,7 @@ const ContactUs = () => {
         </div>
       )}
 
-      <style jsx>{`
+<style jsx>{`
         .contact-container {
           display: flex;
           flex-direction: column;
