@@ -855,6 +855,13 @@ footer {
     justify-content: space-between;
   }
 
+  .search-button {
+    background-color: transparent; /* Make the background transparent */
+    border: none; /* Remove border */
+    cursor: pointer;
+    padding: 0; /* Remove padding */
+  }
+
   /* Adjust the logo styles for mobile */
   nav .logo {
     justify-content: center;
