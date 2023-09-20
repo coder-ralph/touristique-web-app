@@ -109,7 +109,7 @@ nav .menu-lists li:is(:hover, .active) {
   color: #fff;
   transition: all ease 0.3s;
   border-radius: 5px;
-  border: 1px dashed #7f71ff;
+  border: 1px dashed #fff;
 }
 
 /* Menu icon styles */
