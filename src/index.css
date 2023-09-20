@@ -820,7 +820,7 @@ footer {
     cursor: pointer;
     position: absolute;
     top: 10px; /* Adjust the top position as needed */
-    right: 10px; /* Adjust the right position as needed */
+    right: 20px; /* Adjust the right position as needed */
   }
 
   /* When the menu button is checked, display the menu */
