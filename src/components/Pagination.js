@@ -41,12 +41,14 @@ const Pagination = ({ totalPage }) => {
   if (totalPage <= 1) return null;
   return (
     <div className='pagination'>
-      <Link
-        to={`?page=${page - 1 <= 1 ? 1 : page - 1}`}
-        className="prev-next"
-      >
-        <i className='fa-solid fa-arrow-left' /> Prev
-      </Link>
+      {page !== 1 && (
+        <Link
+          to={`?page=${page - 1 <= 1 ? 1 : page - 1}`}
+          className="prev-next"
+        >
+          <i className='fa-solid fa-arrow-left' /> Prev
+        </Link>
+      )}
 
       <ul className="numbers">
         {pageNumbers.map(num => (
@@ -56,12 +58,14 @@ const Pagination = ({ totalPage }) => {
         ))}
       </ul>
 
-      <Link
-        to={`?page=${page + 1 >= totalPage ? totalPage : page + 1}`}
-        className="prev-next"
-      >
-        Next <i className='fa-solid fa-arrow-right' />
-      </Link>
+      {page !== totalPage && (
+        <Link
+          to={`?page=${page + 1 >= totalPage ? totalPage : page + 1}`}
+          className="prev-next"
+        >
+          Next <i className='fa-solid fa-arrow-right' />
+        </Link>
+      )}
     </div>
   );
 };
