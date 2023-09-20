@@ -106,7 +106,7 @@ nav .menu-lists li {
 
 nav .menu-lists li:is(:hover, .active) {
   /* background: rgba(0, 0, 0, 0.05); */
-  color: #7f71ff;
+  color: #fff;
   transition: all ease 0.3s;
   border-radius: 5px;
   border: 1px dashed #7f71ff;
