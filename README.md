@@ -25,7 +25,7 @@ The Touristique Web-App is a user-friendly platform that allows travelers to exp
 
 - **Destination Information:** Users can access detailed information about different tourist destinations, including descriptions, photos, videos, attractions and more.
 
-- **Search and Filters:** The app offers robust search functionality and filters to help users narrow down their options based on preferences such as location, activities, and more.
+- **Search and Filters:** The app offers robust search functionality and filters to help users narrow down their options based on preferences such as location, activities, tips and more.
 
 <!-- - **Interactive Maps:** Users can visualize the locations of various destinations on interactive maps, enhancing their understanding of geographical contexts. -->
 
