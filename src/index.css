@@ -273,10 +273,10 @@ nav :is(.fa-bars, .fa-xmark) {
   object-position: center;
 }
 
-.posts-img:hover img{
+/* .posts-img:hover img{
   transition: all 1s linear;
   filter: invert(1);
-}
+} */
 
 .posts-img .categories{
   position: absolute;
