@@ -19,6 +19,12 @@ const Posts = ({ posts }) => {
   };
 
   return (
+    <div className='container'>
+  <div className='title-box'>
+    <h1 className='best-title zoom-in'>Best Tourist Spots in Antique</h1>
+    <p className='slogan zoom-in' style={{ textAlign: 'center', justifyContent: 'center', color: '#7f71ff' }}>“Discover Antique: Where Beauty Meets Adventure”</p>
+  </div>
+
     <div className='posts-container'>
       {posts?.map(post => (
         <div className="posts-box" key={post.id}>
@@ -103,6 +109,7 @@ const Posts = ({ posts }) => {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 };
