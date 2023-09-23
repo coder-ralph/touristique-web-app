@@ -2,6 +2,12 @@
 
 Welcome to the Touristique Web-App repository! This project combines the power of Hygraph CMS and React.js to create a dynamic and engaging web application for all your tourism needs.
 
+![Touristique](https://github.com/coder-ralph/touristique-web-app/blob/master/public/screenshot.png)
+
+## Live Demo
+
+You can access the live demo [here](https://touristique-web-app.vercel.app/).
+
 <!-- ![Touristique Web-App](screenshot.png) -->
 
 ## Table of Contents
