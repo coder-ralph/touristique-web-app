@@ -62,7 +62,7 @@ nav {
   align-items: center;
   flex-wrap: wrap;
   user-select: none;
-  background-color: #00c2cb;
+  background-color: #fff;
 }
 
 /* Logo styles */
@@ -81,7 +81,7 @@ nav .logo {
 
 /* Logo image styles */
 nav .logo img {
-  max-width: 70px;
+  max-width: 50px;
   height: auto;
   margin-right: 10px;
 }
@@ -106,10 +106,10 @@ nav .menu-lists li {
 
 nav .menu-lists li:is(:hover, .active) {
   /* background: rgba(0, 0, 0, 0.05); */
-  color: #fff;
+  color: #7f71ff;
   transition: all ease 0.3s;
   border-radius: 5px;
-  border: 1px dashed #fff;
+  border: 1px dashed #7f71ff;
 }
 
 /* Menu icon styles */
@@ -147,6 +147,7 @@ nav :is(.fa-bars, .fa-xmark) {
 .submenu.open {
   display: block;
 }
+
 
 /* About Us styles */
 .about-us {
@@ -664,7 +665,6 @@ nav :is(.fa-bars, .fa-xmark) {
   color: #fff;
 }
 
-/* Add these media queries to your 'index.css' file */
 
 /* Mobile devices (portrait and landscape) */
 @media screen and (max-width: 768px) {
@@ -803,7 +803,8 @@ footer {
     width: 100%;
     height: 60vh;
     z-index: 100;
-    background: linear-gradient(to right, #7f71ff, #2b7ddf);
+    /* background: linear-gradient(to right, #7f71ff, #2b7ddf); */
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
