@@ -161,6 +161,7 @@ nav :is(.fa-bars, .fa-xmark) {
   text-align: center;
   color: #333;
   margin-top: 20px;
+  font-size: 32px;
 }
 
 /* Antique title styles */
