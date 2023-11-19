@@ -24,8 +24,8 @@ const AboutUs = () => {
 
   return (
     <div className={`about-us ${scrolling ? 'scrolling' : ''}`}>
-      <h2 className="about-title">Welcome to the <span className="antique-title"> Province of Antique</span></h2>
-      <p style={{ textAlign: 'center', justifyContent: 'center', display: 'flex', color: '#7f71ff' }}>“Where Mountains Meet the Sea”</p>
+      <h2 className="about-title">History <span className="antique-title"> of Antique</span></h2>
+      <p style={{ textAlign: 'center', justifyContent: 'center', display: 'flex', color: '#7f71ff' }}>“Where the Mountains Meet the Sea”</p>
 
       {/* first image */}
       <div className="about-image">
